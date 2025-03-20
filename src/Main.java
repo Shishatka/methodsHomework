@@ -10,17 +10,7 @@ public class Main {
     }
 
     public static void leapYear(int year) {
-        boolean isLeap = false;
-
-        if (year % 4 == 0) {
-            if (year % 100 == 0) {
-                if (year % 400 == 0) {
-                    isLeap = true;
-                }
-            } else {
-                isLeap = true;
-            }
-        }
+        boolean isLeap = (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0);
 
         if (isLeap) {
             System.out.println(year + " год является високосным.");
@@ -64,8 +54,7 @@ public class Main {
         if (days < 0) {
             System.out.println("Доставки нет");
         }
-        else {
-            System.out.println("Потребуется дней: " + days);
+        else { System.out.println("Потребуется дней: " + days);
         }
     }
 
